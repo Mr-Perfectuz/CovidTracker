@@ -11,20 +11,23 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
-class MyCustomAdapter extends ArrayAdapter<CountryMode> {
+class MyCustomAdapter extends ArrayAdapter<CountryModel> {
     private Context context;
-    private List<CountryMode> countryModesList;
+    private List<CountryModel> countryModesList;
+    private List<CountryModel> countryModesListFiltered;
 
 
 
-
-    public MyCustomAdapter( Context context, List<CountryMode> countryModesList) {
+    public MyCustomAdapter( Context context, List<CountryModel> countryModesList) {
         super(context, R.layout.list_custom_item, countryModesList);
 
         this.context = context;
         this.countryModesList = countryModesList;
+        this.countryModesListFiltered = countryModesList;
     }
 
     @NonNull
@@ -34,9 +37,20 @@ class MyCustomAdapter extends ArrayAdapter<CountryMode> {
         TextView tvCountryName = view.findViewById(R.id.tvCountryName);
         ImageView imageView = view.findViewById(R.id.imageFlag);
 
-        tvCountryName.setText(countryModesList.get(position).getCountry());
+        tvCountryName.setText(countryModesListFiltered.get(position).getCountry());
+        Glide.with(context).load(countryModesListFiltered.get(position).getFlag()).into(imageView);
 
+        return view;
+    }
 
-        return super.getView(position, convertView, parent);
+    @Override
+    public int getCount() {
+        return countryModesListFiltered.size();
+    }
+
+    @Nullable
+    @Override
+    public CountryModel getItem(int position) {
+        return countryModesListFiltered.get(position);
     }
 }

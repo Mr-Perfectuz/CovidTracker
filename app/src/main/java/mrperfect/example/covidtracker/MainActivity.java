@@ -47,13 +47,12 @@ public class MainActivity extends AppCompatActivity {
         scrollView = findViewById(R.id.scrollStats);
         pieChart = findViewById(R.id.piechart);
 
-        fetchDate();
+        fetchData();
 
     }
 
-    private void fetchDate() {
+    private void fetchData() {
         String url = "https://corona.lmao.ninja/v2/all/";
-
         simpleArcLoader.start();
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
@@ -112,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(request);
 
     }
+
 
     public void goTrackCountries(View view) {
 

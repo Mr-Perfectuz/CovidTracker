@@ -1,12 +1,12 @@
 package mrperfect.example.covidtracker;
 
-class CountryMode {
+class CountryModel {
     private String flag, country, cases, todayCases, deaths, todayDeaths, recovered, active,critical;
 
-    public CountryMode() {
+    public CountryModel() {
     }
 
-    public CountryMode(String flag, String country, String cases, String todayCases, String deaths, String todayDeaths, String recovered, String active, String critical) {
+    public CountryModel(String flag, String country, String cases, String todayCases, String deaths, String todayDeaths, String recovered, String active, String critical) {
         this.flag = flag;
         this.country = country;
         this.cases = cases;
