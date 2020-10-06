@@ -51,7 +51,6 @@ public class AffectedCountries extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         fetchData();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
