@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">" MBM Covid Tracker"</string>
+
+    <string name="cases"> cases</string>
+    <string name="recovered"> recovered</string>
+    <string name="critical"> critical</string>
+    <string name="active"> active</string>
+    <string name="todayCases"> todayCases</string>
+    <string name="deaths"> deaths</string>
+    <string name="todayDeaths"> todayDeaths</string>
+    <string name="AffectedCountries"> Affected Countries</string>
+
+    <string name="country"> country</string>
+    <string name="countryInfo"> affectedCountries</string>
+    <string name="flag"> flag</string>
+    <string name="affectedCountries"> affectedCountries</string>
+
+</resources>
