@@ -21,7 +21,6 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         positionCountry = intent.getIntExtra("position", 0);
 
-
         getSupportActionBar().setTitle("Details of " + AffectedCountries.countryModelsList.get(positionCountry).getCountry() );
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -43,9 +42,10 @@ public class DetailActivity extends AppCompatActivity {
         tvTodayCases.setText(AffectedCountries.countryModelsList.get(positionCountry).getTodayCases());
         tvTodayDeaths.setText(AffectedCountries.countryModelsList.get(positionCountry).getTodayDeaths());
         tvTotalDeaths.setText(AffectedCountries.countryModelsList.get(positionCountry).getDeaths());
-
-
+        
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
