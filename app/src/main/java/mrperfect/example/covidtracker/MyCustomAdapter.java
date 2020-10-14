@@ -1,5 +1,7 @@
 package mrperfect.example.covidtracker;
 
+
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
